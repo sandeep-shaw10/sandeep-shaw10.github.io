@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.no-hover-effect:hover{
+  background-color: #00000000 !important;
+}
+
+.glassmorphism1 {
+  display: block;
+  position: absolute;
+  filter: blur(60px);
+  background: #22c45e;
+  opacity: 0.5;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  top: -50px;
+  left: -50px;
+  animation: glass-glow 5s ease-in-out alternate infinite;
+}
+
+.glassmorphism2 {
+  display: block;
+  position: absolute;
+  filter: blur(30px);
+  background: #f8f8f8;
+  opacity: 0.5;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  top: 70px;
+  left: -50px;
+  animation: glass-glow 3s ease-in-out alternate infinite;
+}
+
+.glassmorphism3 {
+  display: block;
+  position: absolute;
+  filter: blur(68px);
+  background: #00ffff;
+  opacity: 0.5;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  bottom: 0px;
+  right: 0px;
+  animation: glass-glow 7s ease-in-out alternate infinite;
+}
+
+@keyframes glass-glow {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 0.4;
+  }
+}

@@ -1,0 +1,44 @@
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.neon-shadow {
+  animation: neon-shadow 4s ease-in-out alternate infinite;
+}
+
+
+.neon-shadow-1 {
+  animation: neon-shadow-1 2s ease-in-out alternate infinite;
+  animation-delay: 4s;
+}
+
+
+@keyframes neon-shadow {
+  from {
+    box-shadow: 0 0 0.25px #fff, 0 0 0.5px #fff, 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #fff;
+  }
+  to {
+    box-shadow: 0 0 0.25px #fff, 0 0 0.5px #fff, 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #fff, 0 0 8px #00ffff, 0 0 16px #00ffff, 0 0 32px #00ffff;
+  }
+}
+
+
+@keyframes neon-shadow-1 {
+  from {
+    box-shadow: 0 0 0.25px #fff, 0 0 0.5px #fff, 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #fff;
+  }
+  to {
+    box-shadow: 0 0 0.25px #fff, 0 0 0.5px #fff, 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #fff, 0 0 8px #46c577, 0 0 16px #46c577, 0 0 32px #46c577;
+  }
+}
+
+
+
+
+
