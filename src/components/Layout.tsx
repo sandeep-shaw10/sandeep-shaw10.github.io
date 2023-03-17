@@ -9,11 +9,12 @@ const Layout: React.FC<any> = ({ children }: any) => {
   const links = [
     { name: "About", href: "/about" },
     { name: "Project", href: "/project" },
+    { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
   ];
 
   return (
-    <div className='bg-shaw-0 text-shaw-900 dark:bg-shaw-900 dark:text-shaw-0 flex flex-col min-h-screen'>
+    <div className="bg-shaw-0 text-shaw-900 dark:bg-shaw-900 dark:text-shaw-0 flex flex-col min-h-screen">
       <div className="glassmorphism1"></div>
       <div className="glassmorphism2"></div>
       <div className="glassmorphism3"></div>
@@ -38,8 +39,13 @@ const Layout: React.FC<any> = ({ children }: any) => {
                 </svg>
               </label>
             </div>
-            <div className="flex-1 px-2 mx-2 text-bold">
-                <Link to="/">🥳 SHAW</Link></div>
+            <div className="flex-1 px-2 mx-2">
+              <div style={{ width: '8rem' }}>
+                <Link to="/">
+                  <img loading="lazy" src="/logo.svg" alt="SHAW LOGO" />
+                </Link>
+              </div>
+            </div>
             <div className="flex-none hidden md:block">
               <ul className="menu menu-horizontal">
                 {links &&
@@ -71,11 +77,20 @@ const Layout: React.FC<any> = ({ children }: any) => {
           </div>
 
           <Footer />
-
         </div>
         <div className="drawer-side">
           <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
+          
           <ul className="menu p-4 w-80 bg-shaw-100 dark:bg-shaw-700">
+            <li>
+            <div className="flex-1 px-2 mx-2">
+              <div style={{ width: '8rem' }}>
+                <Link to="/">
+                  <img loading="lazy" src="/logo.svg" alt="SHAW LOGO" />
+                </Link>
+              </div>
+            </div>
+            </li>
             {links &&
               links.map(({ name, href }, index) => (
                 <li key={index}>
@@ -87,7 +102,7 @@ const Layout: React.FC<any> = ({ children }: any) => {
 
             <div className="form-control px-3">
               <label className="label cursor-pointer">
-                <span>{theme ? 'Dark' : 'Light' }</span>
+                <span>{theme ? "Dark" : "Light"}</span>
                 <input
                   type="checkbox"
                   className="toggle toggle-accent"
@@ -99,7 +114,7 @@ const Layout: React.FC<any> = ({ children }: any) => {
           </ul>
         </div>
       </div>
-      </div>
+    </div>
   );
 };
 

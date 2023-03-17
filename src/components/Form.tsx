@@ -48,49 +48,42 @@ const Form = () => {
     }, [])
 
     async function githubOAuth() {
-        const { error } = await supabase.auth.signInWithOAuth({
-            provider: 'github',
+        await supabase.auth.signInWithOAuth({ provider: 'github' }).then(({error}) => {
+          if(error){ toast.error(error.message) }
+          else{
+            toast.success('Authenticating...', {
+              autoClose: 10000
+            })
+          }
         })
-        if(error){ toast.error(error.message) }
-        else{ toast.success('Authenticating...', {
-          autoClose: 10000
-        }) }
-
     }
 
 async function handleSubmit(e: { preventDefault: () => void; }) {
     e.preventDefault()
     if(name.length > 0 && subject.length >= 8 && desc.length >= 8){
-        const { data, error: authError } = await supabase.auth.signInWithOAuth({
+        await supabase.auth.signInWithOAuth({
             provider: 'github',
-        })
-        if(authError){
+        }).then(async({error}) => {
+          if(error){
             toast.error('Failed to Authenticate')
-        }else{
-          // Check if User Exist
-          await supabase.from('auth.users').select().eq('email', auth.user.email).then(async({ data, error: authError }) => {
-            if(authError && data){
-              const { error } = await supabase.from('Feedback').insert({ 
-                  email: auth.user.email, 
-                  name: name,
-                  subject: subject,
-                  message: desc 
-              })
-              if(error){
-                  toast.error("Failed to send Feedback")
-                  console.log(error)
-              }else{
-                  toast.success("Feedback Send Successfuly");
-                  setDesc('')
-                  setName('')
-                  setSubject('')
-              }
-            }else{
-              toast.error("UserID not Registered");
-              localStorage.removeItem(import.meta.env.VITE_REACT_APP_SUPABASE_AUTH_GITHUB)
-            }
+          }else{
+            const { error } = await supabase.from('Feedback').insert({ 
+              email: auth.user.email, 
+              name: name,
+              subject: subject,
+              message: desc 
           })
-        }
+          if(error){
+              toast.error("Failed to send Feedback")
+              console.log(error)
+          }else{
+              toast.success("Feedback Send Successfuly");
+              setDesc('')
+              setName('')
+              setSubject('')
+          }
+          }
+        })
     }else{
         toast.error("Minimum 8 words required for Subject and Message")
     }

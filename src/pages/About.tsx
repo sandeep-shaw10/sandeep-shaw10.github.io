@@ -57,6 +57,7 @@ const About = () => {
     "canva",
     "figma",
     "ai",
+    "daisyUI"
   ];
   const LIB: string[] = [
     "react",
@@ -90,6 +91,30 @@ const About = () => {
       <LogoSection title={"FRONTEND & TOOLS"} logoArray={FRONT} />
       <LogoSection title={"FRAMEWORK & LIBRARY"} logoArray={LIB} />
       <LogoSection title={"SOFTWARE"} logoArray={TOOL} />
+
+
+      <div className="py-16 my-16 ">
+        <div className="text-center w-3/4 m-auto">
+          <div className="px-4 py-8 lg:py-16 bg-shaw-200 dark:bg-shaw-700 rounded-lg shadow-lg shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-800/80">
+            <p>
+              This Website is made by  <a href="https://github.com/sandeep-shaw10" target="_blank" rel="noopener noreferrer" className="font-semibold text-gray-900 underline dark:text-white decoration-blue-500">Sandeep Shaw</a> using</p>
+            <div className="flex flex-col sm:flex-row flex-no-wrap items-center justify-evenly py-4">
+              <div className="w-32 p-4">
+                <img width='100%' src="/logo/vite.svg" alt="Vite" title="Vite" />
+              </div>
+              <div className="w-32 p-4"> 
+                <img width='100%' src="/logo/daisyUI.svg" alt="daisyUI" title="daisyUI" />
+              </div>              
+              <div className="w-32 p-4">
+                <img width='100%' src="/logo/supabase.svg" alt="Supabase" title="Supabase" />
+              </div>
+            </div>
+            <a href="https://github.com/sandeep-shaw10" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+              Source Code
+            </a>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

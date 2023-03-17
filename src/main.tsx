@@ -10,6 +10,7 @@ import Contact from './pages/Contact';
 import { Loader2 } from './components/Loader';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Blogs from './pages/Blogs';
 
 
 const router = createBrowserRouter([
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: <Contact/>
+  },
+  {
+    path: "/blog",
+    element: <Blogs/>
   },
 ]);
 
