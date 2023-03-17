@@ -40,10 +40,12 @@ function Scene() {
     },
     [mode, hovered, down]
   )
+  
 
   return (
     <>
       <PerspectiveCamera makeDefault position={[0, 0, 2.75]} fov={75}>
+      {/* @ts-ignore */}
         <a.ambientLight intensity={ambient} />
         <a.pointLight ref={light} position-z={-15} intensity={2} color="#0f9d8f" />
       </PerspectiveCamera>
