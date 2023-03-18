@@ -1,40 +1,11 @@
 import React, { Suspense } from 'react'
 import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider} from "react-router-dom";
 import App from './App'
 import './index.css'
 import { ThemeProvider } from './hooks/contextTheme'
-import Project from './pages/Project';
-import About from './pages/About';
-import Contact from './pages/Contact';
 import { Loader2 } from './components/Loader';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Blogs from './pages/Blogs';
-
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-  },
-  {
-    path: "/project",
-    element: <Project/>
-  },
-  {
-    path: "/about",
-    element: <About/>
-  },
-  {
-    path: "/contact",
-    element: <Contact/>
-  },
-  {
-    path: "/blog",
-    element: <Blogs/>
-  },
-]);
 
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
@@ -42,7 +13,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <ThemeProvider>
       <Suspense fallback={<Loader2/>}>
       <ToastContainer position="top-center" autoClose={2000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="light" />
-        <RouterProvider router={router} />
+        <App/>
       </Suspense>
     </ThemeProvider>
   </React.StrictMode>,
