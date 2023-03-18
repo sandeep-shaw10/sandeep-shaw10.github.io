@@ -14,6 +14,9 @@ const Blog = () => {
   const PAGE_SIZE = 1
 
   useEffect(() => {
+    toast.warn('Blog Not Added! \n Page is currently under construction and to check back at a later time for updates. \n images are not the property of the website and should not be reproduced without permission from the copyright holder', {
+      autoClose: 10000
+    })
     const fetchBlog = async () => {
       setLoad(true);
       await supabase.from("Blogs").select("*").order("featured").range(offsetVal, offsetVal + PAGE_SIZE - 1).then(({ data, error }) => {
