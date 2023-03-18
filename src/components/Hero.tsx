@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 
 export default function Hero() {
+
+  const resumeLink = `${import.meta.env.VITE_REACT_APP_SUPABASE_URL}/storage/v1/object/public/documents/myResume(Mar2023).pdf`
+
   return (
     <div className="flex lg:flex-row flex-col-reverse content-center justify-around items-center w-100 lg:h-full">
       <div className="lg:w-1/2 pb-4 lg:pl-16">
@@ -21,7 +24,7 @@ export default function Hero() {
               ABOUT
             </Link>
             <a
-              href="#"
+              href={resumeLink} target="_blank" rel="noopener noreferrer"
               className="px-4 py-2 uppercase rounded-lg text-sm text-center lg:text-md text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 shadow-lg shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-800/80"
             >
               RESUME
