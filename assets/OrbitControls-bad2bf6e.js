@@ -1,4 +1,4 @@
-import{r as Ae,g as u_}from"./index-34bb0670.js";/**
+import{r as Ae,g as u_}from"./index-47350426.js";/**
  * @license
  * Copyright 2010-2023 Three.js Authors
  * SPDX-License-Identifier: MIT
