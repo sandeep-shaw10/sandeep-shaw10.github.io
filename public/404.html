@@ -9,13 +9,15 @@
 
       var l = window.location;
       l.replace(
-        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?p=/' +
-        l.pathname.slice(1).split('/').slice(segmentCount).join('/').replace(/&/g, '~and~') +
-        (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-        l.hash
+        loc.protocol + "//" +
+        loc.hostname +
+        (loc.port ? ":" + loc.port : "") +
+        loc.pathname.split("/").slice(0, segmentCount + 1).join("/") +
+        "/?p=/" +
+        loc.pathname.split("/").slice(segmentCount + 1).join("/").replace(/&/g, "~and~") +
+        (loc.search ? "&q=" + loc.search.slice(1).replace(/&/g, "~and~") : "") +
+        loc.hash
       );
-
     </script>
   </head>
   <body>
