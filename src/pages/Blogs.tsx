@@ -11,12 +11,12 @@ const Blog = () => {
   const [loadBtn, setLoadBtn] = useState<boolean>(false);
   const [allData, setAllData] = useState<boolean>(false);
   const [offsetVal, setOffsetVal] = useState<number>(0)
-  const PAGE_SIZE = 1
+  const PAGE_SIZE = 12
 
   useEffect(() => {
-    toast.warn('Blog Not Added! \n Page is currently under construction and to check back at a later time for updates. \n images are not the property of the website and should not be reproduced without permission from the copyright holder', {
-      autoClose: 10000
-    })
+    // toast.warn('Blog Not Added! \n Page is currently under construction and to check back at a later time for updates. \n images are not the property of the website and should not be reproduced without permission from the copyright holder', {
+    //   autoClose: 10000
+    // })
     const fetchBlog = async () => {
       setLoad(true);
       await supabase.from("Blogs").select("*").order("featured").range(offsetVal, offsetVal + PAGE_SIZE - 1).then(({ data, error }) => {
