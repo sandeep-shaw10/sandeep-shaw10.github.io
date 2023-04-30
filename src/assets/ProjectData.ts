@@ -2,10 +2,10 @@ const ProjectData = [
     {
       title: 'CSHB Model',
       desc: 'B.Tech Final year project implementation of an end-to-end encryption using Cryto-Steganography Hybrid BlockChain Model',
-      img: 'https://xepository-images.githubusercontent.com/502709960/7ee7327c-ee46-472a-bd96-e4238e645ea3',
+      img: 'https://icgyfidfomvmafzrqdbc.supabase.co/storage/v1/object/public/blog-images/samvada.png',
       link: 'https://github.com/sandeep-shaw10/cshb-model',
       tags: ['python', 'react', 'firebase'],
-      featured: 'Ongoing',
+      featured: null,
       category: ['Python', 'Web', 'React']
     },
     {
