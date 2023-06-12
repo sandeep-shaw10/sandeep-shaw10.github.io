@@ -63,7 +63,7 @@ function Scene() {
           <sphereBufferGeometry args={[1, 64, 64]} />
           <AnimatedMaterial color={color} envMapIntensity={env} clearcoat={coat} clearcoatRoughness={0} metalness={0.1} />
         </a.mesh>
-        <Environment preset="warehouse" />
+        {/* <Environment preset="warehouse" /> */}
     </>
   )
 }

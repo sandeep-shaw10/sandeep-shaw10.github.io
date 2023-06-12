@@ -105,7 +105,7 @@ export default function Ball() {
           <group rotation={[0, Math.PI, 0]} position={[0, 1, 0]}>
             <Model />
           </group>
-          <Environment preset="city" />
+          {/* <Environment preset="city" /> */}
         </Suspense>
         <ContactShadows position={[0, -2.5, 0]} scale={20} blur={2} far={4.5} />
         <OrbitControls
