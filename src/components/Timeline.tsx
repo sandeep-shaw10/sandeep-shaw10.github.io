@@ -14,7 +14,7 @@ export default function Timeline(){
           info: []
       },
         {
-            date: <>July 2019 - June 2023 </>,
+            date: <>July 2019 - June 2023 <div className="inline-block ml-2 px-2 py-1 rounded-full bg-green-500 text-white text-xs font-semibold">Ongoing</div> </>,
             work: <><span className="hidden md:inline">Government College of Engineering & Ceramic Technology</span><span className="md:hidden">GCECT</span>, Kolkata</>,
             desc: 'Undergraduation: B.Tech in Computer Science and Engineering, CGPA: 9.51',
             info: []
