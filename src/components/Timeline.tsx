@@ -2,9 +2,15 @@ export default function Timeline(){
 
     const DATA = [
       {
+        date: 'March 2024',
+        work: <><span className="hidden md:inline">Graduate Aptitude Test in Engineering</span><span className="md:hidden">GATE</span> 2024</>,
+        desc: 'Achieved AIR-776 in CS with GATE score 718',
+        info: []
+    },
+      {
         date: 'March 2023',
         work: <><span className="hidden md:inline">Graduate Aptitude Test in Engineering</span><span className="md:hidden">GATE</span> 2023</>,
-        desc: 'Achieved an AIR-1915 in Computer Science and Engineering',
+        desc: 'Achieved AIR-1915 in CS with GATE score 555',
         info: []
     },
         {
@@ -16,7 +22,7 @@ export default function Timeline(){
         {
             date: <>July 2019 - June 2023 </>,
             work: <><span className="hidden md:inline">Government College of Engineering & Ceramic Technology</span><span className="md:hidden">GCECT</span>, Kolkata</>,
-            desc: 'Undergraduation: B.Tech in Computer Science and Engineering, CGPA: 9.51',
+            desc: 'Undergraduation: B.Tech in Computer Science and Engineering, CGPA: 9.54',
             info: []
         },
         {

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Hero() {
 
-  const resumeLink = `${import.meta.env.VITE_REACT_APP_SUPABASE_URL}/storage/v1/object/public/documents/Sandeep_Shaw_2023.pdf`
+  const resumeLink = `https://drive.google.com/file/d/1rcRq1v8LDku05sfgBBOjXDaE0Y3hFoLl/view?usp=sharing`
 
   return (
     <div className="flex lg:flex-row flex-col-reverse content-center justify-around items-center w-100 lg:h-full">
