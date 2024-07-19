@@ -1,4 +1,4 @@
-import{r as Ne,g as l_}from"./index-4a7b66e0.js";/**
+import{r as Ne,g as l_}from"./index-16296d1b.js";/**
  * @license
  * Copyright 2010-2023 Three.js Authors
  * SPDX-License-Identifier: MIT
