@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Hero() {
 
-  const resumeLink = `https://drive.google.com/file/d/1rcRq1v8LDku05sfgBBOjXDaE0Y3hFoLl/view?usp=sharing`
+  const resumeLink = `https://docs.google.com/document/d/1t68Y83Zynio-TVU7BCHoeApOyUdtd3kgfx-yBvQoVOk/edit?usp=sharing`
 
   return (
     <div className="flex lg:flex-row flex-col-reverse content-center justify-around items-center w-100 lg:h-full">
