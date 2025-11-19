@@ -1,6 +1,12 @@
 export default function Timeline(){
 
     const DATA = [
+        {
+            date: <>July 2024 - June 2026 (Expected) </>,
+            work: <><span className="hidden md:inline">IIT (ISM)</span><span className="md:hidden">IIT (ISM)</span>, Dhanbad</>,
+            desc: 'Postgraduation: M.Tech in Computer Science and Engineering, CGPA: 8.54',
+            info: []
+        },
       {
         date: 'March 2024',
         work: <><span className="hidden md:inline">Graduate Aptitude Test in Engineering</span><span className="md:hidden">GATE</span> 2024</>,
